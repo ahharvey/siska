@@ -1,0 +1,54 @@
+<%= form_for @elfour do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :district %>
+			</th>
+			<td>
+				<%= collection_select (:elfour, :district_id, District.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :year %>
+			   
+			</th>
+			<td>
+				<%= f.number_field :year, :in=>1970..2099 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :quarter %> 
+			</th>
+			<td>
+				<%= f.number_field :quarter, :in=>1..4 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :fish %>			    
+			</th>
+			<td>
+				<%= collection_select (:elfour, :fish_id, Fish.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :value %>
+			</th>
+			<td>
+				<%= f.number_field :value %> IDR / kg
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+
+<% end %>

@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+	<% title "Welcome" %>
+	<div id="main">
+		<div id="marine" class="landing inline round">
+			<p>
+				<%= link_to "Module 1", module1_path %><br />
+				<%= link_to "Marine Fisheries", module1_path %>
+			</p>
+		</div>
+		<div id="inland" class="landing inline round">
+			<p>
+				<%= link_to "Module II", module2_path %><br />
+				<%= link_to "Inland Open Water Fisheries", module2_path %>
+			</p>
+		</div>
+		<div id="culture" class="landing inline round">
+			<p>
+				<%= link_to "Module III", module3_path %><br />
+				<%= link_to "Brackishwater Culture and Freshwater Culture", module3_path %>
+			</p>
+		</div>
+			
+	</div>
+<% else %>
+	<% title "Login" %>
+	<div id="login_container">
+		<div id="login" class="round center">
+			<div id="login_header">
+				<h1>SISKA+</h1>
+			</div>
+			<div id="login_body" class=""> 		
+			
+				<%= render :partial => "shared/login" %>	
+		
+			</div>	
+		</div>
+	</div>
+<% end %>

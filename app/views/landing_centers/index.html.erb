@@ -1,0 +1,31 @@
+<% title "Landing Centers" %>
+
+<table class="index-table">
+  	<tr>
+	    <th>Landing Center</th>
+	    <th>Sub-district</th>
+		<th></th>
+	</tr>
+	<% for landing_center in @landing_centers %>
+	<tr>
+		<td><%= landing_center.name %></td>
+	    <td><%= landing_center.sdistrict %></td>
+	    <td>
+			<%= link_to view_ico, landing_center %>
+	    	<%= link_to edit_ico, edit_landing_center_path(landing_center) %>
+	    	<%= link_to delete_ico, landing_center, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @landing_centers %>
+    </div>
+    <%= will_paginate @landing_centers, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<p><%= link_to new_ico, new_landing_center_path %></p>

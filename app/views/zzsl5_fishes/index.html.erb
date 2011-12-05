@@ -1,0 +1,21 @@
+<% title "Sl5 Fishes" %>
+
+<table>
+  <tr>
+    <th>Sl5</th>
+    <th>Fish</th>
+    <th>Weight</th>
+  </tr>
+  <% for sl5_fish in @sl5_fishes %>
+    <tr>
+      <td><%= sl5_fish.SL5 %></td>
+      <td><%= sl5_fish.fish %></td>
+      <td><%= sl5_fish.weight %></td>
+      <td><%= link_to "Show", sl5_fish %></td>
+      <td><%= link_to "Edit", edit_sl5_fish_path(sl5_fish) %></td>
+      <td><%= link_to "Destroy", sl5_fish, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Sl5 Fish", new_sl5_fish_path %></p>

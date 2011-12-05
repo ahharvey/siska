@@ -1,0 +1,20 @@
+<% title "Sl5 Fish" %>
+
+<p>
+  <strong>Sl5:</strong>
+  <%= @sl5_fish.SL5 %>
+</p>
+<p>
+  <strong>Fish:</strong>
+  <%= @sl5_fish.fish %>
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @sl5_fish.weight %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_sl5_fish_path(@sl5_fish) %> |
+  <%= link_to "Destroy", @sl5_fish, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sl5_fishes_path %>
+</p>

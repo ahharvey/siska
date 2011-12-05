@@ -1,0 +1,44 @@
+<% title "Sl5" %>
+
+<p>
+  <strong>Landingcenter:</strong>
+  <%= @sl5.LandingCenter %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @sl5.date %>
+</p>
+<p>
+  <strong>Gear:</strong>
+  <%= @sl5.gear %>
+</p>
+<p>
+  <strong>Serialno:</strong>
+  <%= @sl5.SerialNo %>
+</p>
+<p>
+  <strong>Observation:</strong>
+  <%= @sl5.observation %>
+</p>
+<p>
+  <strong>Wtdealer:</strong>
+  <%= @sl5.WtDealer %>
+</p>
+<p>
+  <strong>Wtconsumed:</strong>
+  <%= @sl5.WtConsumed %>
+</p>
+<p>
+  <strong>Wtcrew:</strong>
+  <%= @sl5.WtCrew %>
+</p>
+<p>
+  <strong>Wtothers:</strong>
+  <%= @sl5.WtOthers %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_sl5_path(@sl5) %> |
+  <%= link_to "Destroy", @sl5, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sl5s_path %>
+</p>

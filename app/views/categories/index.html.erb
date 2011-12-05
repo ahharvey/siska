@@ -1,0 +1,29 @@
+<% title "Categories" %>
+
+<table class="index-table">
+  	<tr>
+	  	<th>Category</th>
+		<th></th>
+	</tr>
+	<% for category in @categories %>
+	<tr>
+	    <td><%= category.name %></td>
+	    <td>
+			<%= link_to view_ico, category %>
+	    	<%= link_to edit_ico, edit_category_path(category) %>
+	    	<%= link_to delete_ico, category, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @categories %>
+    </div>
+    <%= will_paginate @categories, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<%= link_to new_ico, new_category_path %></p>

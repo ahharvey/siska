@@ -1,0 +1,47 @@
+<% title "Fish" %>
+
+<table class="index-table">
+  	<tr>
+		<th>Code</th>
+		<th>National Name</th>
+		<th>Local Name</th>
+		<th>Family</th>
+		<th>English Name</th>
+		<th>Latin Name</th>
+		<th>Sector</th>
+		<th>Water</th>
+		<th>Category</th>
+		<th>Status</th>
+		<th></th>
+	</tr>
+	<% for fish in @fishes %>
+	<tr>
+	  	<td><%= fish.code %></td>
+		<td><%= fish.nat_nm %></td>
+		<td><%= fish.loc_nm %></td>
+		<td><%= fish.family %></td>
+		<td><%= fish.eng_nm %></td>
+		<td><%= fish.lat_nm %></td>
+		<td><%= fish.sector_id %></td>
+		<td><%= fish.water_id %></td>
+		<td><%= fish.category_id %></td>
+		<td><%= fish.status_id %></td>
+		<td>
+			<%= link_to view_ico, fish %>
+			<%= link_to edit_ico, edit_fish_path(fish) %>
+			<%= link_to delete_ico, fish, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+  	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @fishes %>
+    </div>
+    <%= will_paginate @fishes, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<%= link_to new_ico, new_fish_path %>

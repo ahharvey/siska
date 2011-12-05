@@ -1,0 +1,48 @@
+<% title "Fish" %>
+
+<p>
+  <strong>Code:</strong>
+  <%= @fish.code %>
+</p>
+<p>
+  <strong>Nat Nm:</strong>
+  <%= @fish.nat_nm %>
+</p>
+<p>
+  <strong>Loc Nm:</strong>
+  <%= @fish.loc_nm %>
+</p>
+<p>
+  <strong>Family:</strong>
+  <%= @fish.family %>
+</p>
+<p>
+  <strong>Eng Nm:</strong>
+  <%= @fish.eng_nm %>
+</p>
+<p>
+  <strong>Lat Nm:</strong>
+  <%= @fish.lat_nm %>
+</p>
+<p>
+  <strong>Gear:</strong>
+  <%= @fish.sector %>
+</p>
+<p>
+  <strong>Water:</strong>
+  <%= @fish.water %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= @fish.category %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @fish.status %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_fish_path(@fish) %> |
+  <%= link_to delete_ico, @fish, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, fish_index_path %>
+</p>

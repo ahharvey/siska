@@ -1,0 +1,12 @@
+<% title "Gear" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gear.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_gear_path(@gear) %> |
+  <%= link_to delete_ico, @gear, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, gears_path %>
+</p>

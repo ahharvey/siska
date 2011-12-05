@@ -1,0 +1,19 @@
+one:
+  date: 2011-11-17
+  LandingCenter: 
+  Gear: 
+  interval: 1
+  SerialNo: MyString
+  BoatName: MyString
+  BoatSize: 
+  sampled: false
+
+two:
+  date: 2011-11-17
+  LandingCenter: 
+  Gear: 
+  interval: 1
+  SerialNo: MyString
+  BoatName: MyString
+  BoatSize: 
+  sampled: false

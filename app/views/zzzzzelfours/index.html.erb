@@ -1,0 +1,25 @@
+<% title "elfours" %>
+
+<table>
+  <tr>
+    <th>District</th>
+    <th>Year</th>
+    <th>Quarter</th>
+    <th>Fish</th>
+    <th>Value</th>
+  </tr>
+  <% for elfour in @elfours %>
+    <tr>
+      <td><%= elfour.district %></td>
+      <td><%= elfour.year %></td>
+      <td><%= elfour.quarter %></td>
+      <td><%= elfour.fish %></td>
+      <td><%= elfour.value %></td>
+      <td><%= link_to "Show", elfour %></td>
+      <td><%= link_to "Edit", edit_elfour_path(elfour) %></td>
+      <td><%= link_to "Destroy", elfour, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New elfour", new_elfour_path %></p>

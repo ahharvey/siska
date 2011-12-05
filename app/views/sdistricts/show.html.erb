@@ -1,0 +1,16 @@
+<% title "Sdistrict" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sdistrict.name %>
+</p>
+<p>
+  <strong>District:</strong>
+  <%= @sdistrict.district %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_sdistrict_path(@sdistrict) %> |
+  <%= link_to delete_ico, @sdistrict, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, sdistricts_path %>
+</p>

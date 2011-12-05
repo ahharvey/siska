@@ -1,0 +1,33 @@
+<% title "SL6" %>
+
+<table class="index-table">
+	<tr>
+	   <th>Village</th>
+	   <th>Year</th>
+	   <th>Quarter</th>
+	   <th>Gear</th>
+	   <th>Boat Size</th>
+	   <th>Units</th>
+	   <th>Month</th>
+	   <th>Trips</th>
+	</tr>
+	<% for slsix in @slsixes %>
+	<tr>
+	    <td><%= slsix.village %></td>
+	    <td><%= slsix.year %></td>
+	    <td><%= slsix.quarter %></td>
+	    <td><%= slsix.gear %></td>
+	    <td><%= slsix.boat_size %></td>
+	    <td><%= slsix.units %></td>
+	    <td><%= slsix.month %></td>
+	    <td><%= slsix.trips %></td>
+	    <td>
+			<%= link_to view_ico, slsix %>
+	    	<%= link_to edit_ico, edit_slsix_path(slsix) %>
+			<%= link_to delete_ico, slsix, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<p><%= link_to new_ico, new_slsix_path %></p>

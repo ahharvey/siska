@@ -1,0 +1,16 @@
+<% title "Village" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @village.name %>
+</p>
+<p>
+  <strong>Sdistrict:</strong>
+  <%= @village.sdistrict %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_village_path(@village) %> |
+  <%= link_to "Destroy", @village, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", villages_path %>
+</p>

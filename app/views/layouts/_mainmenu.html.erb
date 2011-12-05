@@ -1,0 +1,72 @@
+<nav id="mainmenu" class="">
+	<ul class="sf-menu">
+		<li class="current">
+			<a href="#">Admin</a>
+			<ul>
+				<li><%= link_to "Users", users_path %></li>
+				<li class="current"><%= link_to "Positions", positions_path %></li>
+				<li><%= link_to "Offices", offices_path %></li>
+				<li><%= link_to "Sub-Districts", sdistricts_path %></li>
+				<li><%= link_to "Districts", districts_path %></li>
+				<li><%= link_to "Provinces", provinces_path %></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Fish</a>
+			<ul>
+				<li><%= link_to "Fish", fish_index_path %></li>
+				<li><%= link_to "Sectors", sectors_path %></li>
+				<li><%= link_to "Waters", waters_path %></li>
+				<li><%= link_to "Categories", categories_path %></li>
+				<li><%= link_to "Statuses", statuses_path %></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#">Fishery</a>
+			<ul>
+				<li><%= link_to "Gear", gears_path %></li>
+				<li><%= link_to "Gear Categories", gear_categories_path %></li>
+				<li><%= link_to "Vessel Sizes", boat_sizes_path %></li>
+			</ul>
+		</li>
+		<li>
+			<%= link_to "Module 1", module1_path %>
+			<ul>
+				<li>
+					<a href="#">Survey</a>
+					<ul>
+						<li><%= link_to "SL4", slfours_path %></li>
+						<li><%= link_to "SL5", slfives_path %></li>
+						<li><%= link_to "SL6", slsixes_path %></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Estimation</a>
+					<ul>
+						<li><%= link_to "EL4", elfours_path %></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Reporting</a>
+					<ul>
+						<li></li>
+					</ul>
+				</li>
+			</ul>
+		</li>					
+		<li>
+			<%= link_to "Module 2", module2_path %>
+		</li>
+		<li>
+			<%= link_to "Module 3", module3_path %>
+		</li>	
+	</ul>
+	
+	<script> 
+
+	    $(document).ready(function() { 
+	        $('ul.sf-menu').superfish(); 
+	    }); 
+
+	</script>
+</nav>

@@ -1,0 +1,33 @@
+<% title "Sl5s" %>
+
+<table>
+  <tr>
+    <th>Landingcenter</th>
+    <th>Date</th>
+    <th>Gear</th>
+    <th>Serialno</th>
+    <th>Observation</th>
+    <th>Wtdealer</th>
+    <th>Wtconsumed</th>
+    <th>Wtcrew</th>
+    <th>Wtothers</th>
+  </tr>
+  <% for sl5 in @sl5s %>
+    <tr>
+      <td><%= sl5.LandingCenter %></td>
+      <td><%= sl5.date %></td>
+      <td><%= sl5.gear %></td>
+      <td><%= sl5.SerialNo %></td>
+      <td><%= sl5.observation %></td>
+      <td><%= sl5.WtDealer %></td>
+      <td><%= sl5.WtConsumed %></td>
+      <td><%= sl5.WtCrew %></td>
+      <td><%= sl5.WtOthers %></td>
+      <td><%= link_to "Show", sl5 %></td>
+      <td><%= link_to "Edit", edit_sl5_path(sl5) %></td>
+      <td><%= link_to "Destroy", sl5, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Sl5", new_sl5_path %></p>

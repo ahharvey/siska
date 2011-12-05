@@ -1,0 +1,12 @@
+<% title "Role" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @role.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_role_path(@role) %> |
+  <%= link_to delete_ico, @role, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, roles_path %>
+</p>

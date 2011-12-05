@@ -1,0 +1,2 @@
+module LandingCentersHelper
+end

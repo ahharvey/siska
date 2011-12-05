@@ -1,0 +1,29 @@
+<% title "Gear Categories" %>
+
+<table class="index-table">
+  <tr>
+    <th>Name</th>
+	<th></th>
+  </tr>
+  <% for gear_category in @gear_categories %>
+    <tr>
+      	<td><%= gear_category.name %></td>
+      	<td>
+			<%= link_to view_ico, gear_category %>
+      		<%= link_to edit_ico, edit_gear_category_path(gear_category) %>
+      		<%= link_to delete_ico, gear_category, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @gear_categories %>
+    </div>
+    <%= will_paginate @gear_categories, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<p><%= link_to new_ico, new_gear_category_path %></p>

@@ -1,0 +1,16 @@
+<% title "Boat Size" %>
+
+<p>
+  <strong>Size:</strong>
+  <%= @boat_size.size %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= @boat_size.description %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_boat_size_path(@boat_size) %> |
+  <%= link_to delete_ico, @boat_size, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, boat_sizes_path %>
+</p>

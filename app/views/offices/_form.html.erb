@@ -1,0 +1,42 @@
+<%= form_for @office do |f| %>
+	<%= f.error_messages %>
+  	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :name, "Office Name" %>
+			    
+			</th>
+			<td>
+				<%= f.text_field :name %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :address1, "Address" %>
+			    
+			</th>
+			<td>
+				<%= f.text_field :address1 %><br />
+				<%= f.text_field :address2 %><br />
+				<%= f.text_field :address3 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :sdistrict, "Sub-district" %>
+			    
+			</th>
+			<td>
+				<%= collection_select (:office, :sdistrict_id, Sdistrict.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+  
+<% end %>

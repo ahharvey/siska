@@ -1,0 +1,31 @@
+<% title "Districts" %>
+
+<table class="index-table">
+  	<tr>
+		<th>District</th>
+	  	<th>Province</th>
+		<th></th>
+	</tr>
+	<% for district in @districts %>
+	<tr>
+	    <td><%= district.name %></td>
+	    <td><%= district.province %></td>
+	    <td>
+			<%= link_to show_ico, district %>
+	    	<%= link_to edit_ico, edit_district_path(district) %>
+	    	<%= link_to delete_ico, district, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @districts %>
+    </div>
+    <%= will_paginate @districts, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<%= link_to new_ico, new_district_path %>

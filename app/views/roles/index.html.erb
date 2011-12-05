@@ -1,0 +1,29 @@
+<% title "Roles" %>
+
+<table class="index-table">
+  	<tr>
+		<th>Role</th>
+		<th></th>
+	</tr>
+	<% for role in @roles %>
+	<tr>
+	    <td><%= role.name %></td>
+	    <td>
+			<%= link_to view_ico, role %>
+			<%= link_to edit_ico, edit_role_path(role) %>
+			<%= link_to delete_ico, role, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @roles %>
+    </div>
+    <%= will_paginate @roles, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<p><%= link_to new_ico, new_role_path %></p>

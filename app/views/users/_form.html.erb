@@ -1,0 +1,70 @@
+<%= form_for @user do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :lname, "Family Name" %>		    
+			</th>
+			<td>
+				<%= f.text_field :lname %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :fname, "First Name(s)" %>	    
+			</th>
+			<td>
+				<%= f.text_field :fname %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :email %>			
+			</th>
+			<td>
+				<%= f.text_field :email %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :position %>
+			</th>
+			<td>
+				<%= collection_select (:user, :position_id, Position.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :office %>			
+			</th>
+			<td>
+				<%= collection_select (:user, :office_id, Office.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				Role		
+			</th>
+			<td>
+				<% for role in Role.all %>
+				<div>
+				  <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+				  <%=h role.name %>
+				</div>
+				<% end %>
+				<%= hidden_field_tag "user[role_ids][]", "" %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+
+<% end %>

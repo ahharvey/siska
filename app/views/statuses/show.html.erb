@@ -1,0 +1,12 @@
+<% title "Status" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @status.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_status_path(@status) %> |
+  <%= link_to delete_ico, @status, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, statuses_path %>
+</p>

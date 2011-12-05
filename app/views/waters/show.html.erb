@@ -1,0 +1,12 @@
+<% title "Water" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @water.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_water_path(@water) %> |
+  <%= link_to delete_ico, @water, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, waters_path %>
+</p>

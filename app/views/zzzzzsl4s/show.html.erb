@@ -1,0 +1,40 @@
+<% title "Sl4" %>
+
+<p>
+  <strong>Date:</strong>
+  <%= @sl4.date %>
+</p>
+<p>
+  <strong>Landingcenter:</strong>
+  <%= @sl4.LandingCenter %>
+</p>
+<p>
+  <strong>Gear:</strong>
+  <%= @sl4.Gear %>
+</p>
+<p>
+  <strong>Interval:</strong>
+  <%= @sl4.interval %>
+</p>
+<p>
+  <strong>Serialno:</strong>
+  <%= @sl4.SerialNo %>
+</p>
+<p>
+  <strong>Boatname:</strong>
+  <%= @sl4.BoatName %>
+</p>
+<p>
+  <strong>Boatsize:</strong>
+  <%= @sl4.BoatSize %>
+</p>
+<p>
+  <strong>Sampled:</strong>
+  <%= @sl4.sampled %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_sl4_path(@sl4) %> |
+  <%= link_to "Destroy", @sl4, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sl4s_path %>
+</p>

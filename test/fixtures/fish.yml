@@ -1,0 +1,23 @@
+one:
+  code: MyString
+  nat_nm: MyString
+  loc_nm: MyString
+  family: MyString
+  eng_nm: MyString
+  lat_nm: MyString
+  gear: 
+  water: 
+  category: 
+  status: 
+
+two:
+  code: MyString
+  nat_nm: MyString
+  loc_nm: MyString
+  family: MyString
+  eng_nm: MyString
+  lat_nm: MyString
+  gear: 
+  water: 
+  category: 
+  status: 

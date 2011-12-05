@@ -1,0 +1,31 @@
+<% title "Sl4s" %>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Landingcenter</th>
+    <th>Gear</th>
+    <th>Interval</th>
+    <th>Serialno</th>
+    <th>Boatname</th>
+    <th>Boatsize</th>
+    <th>Sampled</th>
+  </tr>
+  <% for sl4 in @sl4s %>
+    <tr>
+      <td><%= sl4.date %></td>
+      <td><%= sl4.LandingCenter %></td>
+      <td><%= sl4.Gear %></td>
+      <td><%= sl4.interval %></td>
+      <td><%= sl4.SerialNo %></td>
+      <td><%= sl4.BoatName %></td>
+      <td><%= sl4.BoatSize %></td>
+      <td><%= sl4.sampled %></td>
+      <td><%= link_to "Show", sl4 %></td>
+      <td><%= link_to "Edit", edit_sl4_path(sl4) %></td>
+      <td><%= link_to "Destroy", sl4, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Sl4", new_sl4_path %></p>

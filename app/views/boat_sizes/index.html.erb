@@ -1,0 +1,30 @@
+<% title "Boat Sizes" %>
+
+<table class="index-table">
+  	<tr>
+	   	<th>Size</th>
+	   	<th>Description</th>
+		<th></th>
+	</tr>
+	<% for boat_size in @boat_sizes %>
+	<tr>
+	     <td><%= boat_size.size %></td>
+	     <td><%= boat_size.description %></td>
+	     <td>
+			<%= link_to view_ico, boat_size %></td>
+	     	<%= link_to edit_ico, edit_boat_size_path(boat_size) %></td>
+	     	<%= link_to delete_ico, boat_size, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @boat_sizes %>
+    </div>
+    <%= will_paginate @boat_sizes, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<p><%= link_to new_ico, new_boat_size_path %></p>

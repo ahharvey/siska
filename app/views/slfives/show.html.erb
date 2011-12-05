@@ -1,0 +1,44 @@
+<% title "Slfive" %>
+
+<p>
+  <strong>Landing Center:</strong>
+  <%= @slfive.landing_center %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @slfive.date %>
+</p>
+<p>
+  <strong>Gear:</strong>
+  <%= @slfive.gear %>
+</p>
+<p>
+  <strong>Serialno:</strong>
+  <%= @slfive.serialno %>
+</p>
+<p>
+  <strong>Sampled:</strong>
+  <%= @slfive.sampled %>
+</p>
+<p>
+  <strong>Wt Dealer:</strong>
+  <%= @slfive.wt_dealer %>
+</p>
+<p>
+  <strong>Wt Consumed:</strong>
+  <%= @slfive.wt_consumed %>
+</p>
+<p>
+  <strong>Wt Crew:</strong>
+  <%= @slfive.wt_crew %>
+</p>
+<p>
+  <strong>Wt Others:</strong>
+  <%= @slfive.wt_others %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_slfive_path(@slfive) %> |
+  <%= link_to delete_ico, @slfive, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, slfives_path %>
+</p>

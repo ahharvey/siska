@@ -1,0 +1,2 @@
+module GearCategoriesHelper
+end

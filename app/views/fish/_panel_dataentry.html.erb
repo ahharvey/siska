@@ -1,0 +1,63 @@
+<div id="data_panel_container" class="data-panel-container">
+<div id="data_panel" class="data-panel">	
+	<%= form_for(@fish) do |f| %>
+	  	<% if @fish.errors.any? %>
+			<div id="error_explanation">
+		    	<h2><%= pluralize(@fish.errors.count, "error") %> prohibited this log from being saved:</h2>
+
+		      	<ul>
+		      		<% @fish.errors.full_messages.each do |msg| %>
+		        	<li><%= msg %></li>
+		      		<% end %>
+		      	</ul>
+		    </div>
+		<% end %>
+
+		<table class="data-entry">
+			<tr>
+				<th><%= f.label :code %></th>
+				<td><%= f.text_field :code %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :nat_nm, "National Name" %></th>
+				<td><%= f.text_field :nat_nm %></td>
+				<td class="spacer"></td>
+				<th><%= f.label :loc_nm, "Local Name" %></th>
+				<td><%= f.text_field :loc_nm %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :family %></th>
+				<td><%= f.text_field :family %></td>
+				<td class="spacer"></td>
+				<th><%= f.label :lat_nm, "Latin Name" %></th>
+				<td><%= f.text_field :lat_nm %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :eng_nm, "English Name" %></th>
+				<td><%= f.text_field :eng_nm %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :sector %></th>
+				<td><%= collection_select (:fish, :sector_id, Sector.default, :id, :name, :prompt => 'Please select...' ) %></td>
+				<td class="spacer"></td>
+				<th><%= f.label :water %></th>
+				<td><%= collection_select (:fish, :water_id, Water.default, :id, :name, :prompt => 'Please select...' ) %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :category %></th>
+				<td><%= collection_select (:fish, :category_id, Category.default, :id, :name, :prompt => 'Please select...' ) %></td>
+				<td class="spacer"></td>
+				<th><%= f.label :status %></th>
+				<td><%= collection_select (:fish, :status_id, Status.default, :id, :name, :prompt => 'Please select...' ) %></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td></td>
+				<td class="spacer"></td>
+				<th></th>
+				<td><%= f.submit %></td>
+			</tr>
+		</table>
+	<% end %>
+</div>
+</div>

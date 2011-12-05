@@ -1,0 +1,12 @@
+<% title "Category" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @category.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_category_path(@category) %> |
+  <%= link_to delete_ico, @category, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, categories_path %>
+</p>

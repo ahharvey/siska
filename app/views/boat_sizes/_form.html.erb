@@ -1,0 +1,30 @@
+<%= form_for @boat_size do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :size %>			    
+			</th>
+			<td>
+				<%= f.text_field :size %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :description %>
+			</th>
+			<td>
+				<%= f.text_field :description %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+	
+
+<% end %>

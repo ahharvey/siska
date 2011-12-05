@@ -1,4 +1,73 @@
 Siska::Application.routes.draw do
+
+  resources :import_tables
+
+  get "csv/import"
+
+  resources :slsixes, :path => "SL6"
+
+  resources :villages
+
+  resources :slfives, :path => "SL5"
+
+  resources :slfive_fishes
+
+  resources :slfours, :path => "SL4"
+
+  resources :sectors
+
+  resources :boat_sizes
+
+  resources :landing_centers
+
+  resources :gear_categories
+
+  resources :elfours, :path => "EL4"
+
+  resources :statuses
+
+  resources :categories
+
+  resources :waters
+
+  resources :gears
+
+  resources :fish
+
+  resources :user_roles
+
+  resources :roles
+
+  devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
+
+  resources :provinces
+
+  resources :districts
+
+  resources :sdistricts
+
+  resources :positions
+
+  resources :offices
+
+  resources :users
+  
+  root :to => "pages#home"
+  
+  match '/module1', :to => 'pages#module1'
+  match '/module2',   :to => 'pages#module2'
+  match '/module3',    :to => 'pages#module3'
+  match 'SL6', :to => 'slsixes'
+  match "/application.manifest" => Rails::Offline  
+  match 'import_tables/:id' => 'import_tables#merge'
+    
+  post "csv/import" => 'csv#upload'
+  
+  get "pages/module1"
+  get "pages/module2"
+  get "pages/module3"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

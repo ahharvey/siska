@@ -1,0 +1,19 @@
+one:
+  village: 
+  year: 1
+  quarter: 1
+  gear: 
+  boat_size: 
+  units: 
+  month: MyString
+  trips: 1
+
+two:
+  village: 
+  year: 1
+  quarter: 1
+  gear: 
+  boat_size: 
+  units: 
+  month: MyString
+  trips: 1

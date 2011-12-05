@@ -1,0 +1,12 @@
+<% title "Gear Category" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gear_category.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_gear_category_path(@gear_category) %> |
+  <%= link_to "Destroy", @gear_category, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gear_categories_path %>
+</p>

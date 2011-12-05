@@ -1,0 +1,28 @@
+<% title "Office" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @office.name %>
+</p>
+<p>
+  <strong>Address1:</strong>
+  <%= @office.address1 %>
+</p>
+<p>
+  <strong>Address2:</strong>
+  <%= @office.address2 %>
+</p>
+<p>
+  <strong>Address3:</strong>
+  <%= @office.address3 %>
+</p>
+<p>
+  <strong>Sdistrict:</strong>
+  <%= @office.sdistrict %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_office_path(@office) %> |
+  <%= link_to delete_ico, @office, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, offices_path %>
+</p>

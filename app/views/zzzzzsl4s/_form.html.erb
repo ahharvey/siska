@@ -1,0 +1,36 @@
+<%= form_for @sl4 do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :LandingCenter %><br />
+    <%= f.text_field :LandingCenter %>
+  </p>
+  <p>
+    <%= f.label :Gear %><br />
+    <%= f.text_field :Gear %>
+  </p>
+  <p>
+    <%= f.label :interval %><br />
+    <%= f.number_field :interval %>
+  </p>
+  <p>
+    <%= f.label :SerialNo %><br />
+    <%= f.text_field :SerialNo %>
+  </p>
+  <p>
+    <%= f.label :BoatName %><br />
+    <%= f.text_field :BoatName %>
+  </p>
+  <p>
+    <%= f.label :BoatSize %><br />
+    <%= f.text_field :BoatSize %>
+  </p>
+  <p>
+    <%= f.label :sampled %><br />
+    <%= f.check_box :sampled %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

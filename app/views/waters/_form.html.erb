@@ -1,0 +1,21 @@
+<%= form_for @water do |f| %>
+	<%= f.error_messages %>
+	<table class="">
+		<tr>
+			<th>
+				<%= f.label :name %>
+			</th>
+			<td>
+				<%= f.text_field :name %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+	
+<% end %>

@@ -11,6 +11,8 @@ end
 
 module Siska
   class Application < Rails::Application
+    ENV["RAILS_ASSET_ID"] = "" 
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -41,8 +43,10 @@ module Siska
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
+    config.assets.initialize_on_precompile = false
+    
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    WillPaginate.per_page = 25
   end
 end

@@ -1,0 +1,33 @@
+<% title "Sdistricts" %>
+
+<table class="index-table">
+  	<tr>
+	  	<th>Sub-District</th>
+	  	<th>District</th>
+		<th>Province</th>
+		<th></th>
+	</tr>
+	<% for sdistrict in @sdistricts %>
+	<tr>
+	    <td><%= sdistrict.name %></td>
+	    <td><%= sdistrict.district %></td>
+		<td><%= sdistrict.district.province %></td>
+	    <td>
+			<%= link_to show_ico, sdistrict %>
+	    	<%= link_to edit_ico, edit_sdistrict_path(sdistrict) %>
+	    	<%= link_to delete_ico, sdistrict, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @sdistricts %>
+    </div>
+    <%= will_paginate @sdistricts, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<p><%= link_to new_ico, new_sdistrict_path %></p>

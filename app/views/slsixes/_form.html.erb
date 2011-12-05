@@ -1,0 +1,78 @@
+<%= form_for @slsix do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :village %>			    
+			</th>
+			<td>
+				<%= collection_select (:slsix, :village_id, Village.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    	<%= f.label :year %>			    
+			</th>
+			<td>
+				<%= f.number_field :year, :in=>1970..2099 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    	<%= f.label :quarter %>			    
+			</th>
+			<td>
+				<%= f.number_field :quarter, :in=>1..4 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		        <%= f.label :gear %>			    
+			</th>
+			<td>
+				<%= collection_select (:slsix, :gear_id, Gear.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    	<%= f.label :boat_size %>			    
+			</th>
+			<td>
+				<%= collection_select (:slsix, :boat_size_id, BoatSize.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    	<%= f.label :units %>			    
+			</th>
+			<td>
+				<%= f.text_field :units, :in=>0..99 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    	<%= f.label :month %>			    
+			</th>
+			<td>
+				<%= f.text_field :month %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    	<%= f.label :trips %>			   
+			</th>
+			<td>
+				<%= f.number_field :trips, :in=>0..99 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+		    
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>	
+
+<% end %>

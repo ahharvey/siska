@@ -1,0 +1,16 @@
+<%= form_for @slfive_fish do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :Slfive %><br />
+    <%= f.text_field :Slfive %>
+  </p>
+  <p>
+    <%= f.label :fish %><br />
+    <%= f.text_field :fish %>
+  </p>
+  <p>
+    <%= f.label :weight %><br />
+    <%= f.number_field :weight %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

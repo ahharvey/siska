@@ -1,0 +1,77 @@
+<%= form_for @slfour do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :date %>
+			</th>
+			<td>
+				<%= f.date_select :date %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :LandingCenter, "Landing Center" %>
+			</th>
+			<td>
+				<%= collection_select (:slfour, :LandingCenter_id, LandingCenter.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :Gear %>
+			</th>
+			<td>
+				<%= collection_select (:slfour, :Gear_id, Gear.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :interval %>
+			</th>
+			<td>
+				<%= f.number_field :interval,:in=>0..99 %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :SerialNo, "Serial No." %>	    
+			</th>
+			<td>
+				<%= f.text_field :SerialNo %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :BoatName, "Boat Name" %> 
+			</th>
+			<td>
+				<%= f.text_field :BoatName %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+	    		<%= f.label :BoatSize, "Boat Size" %>			    
+			</th>
+			<td>
+				<%= collection_select (:slfour, :BoatSize_id, BoatSize.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+	    		<%= f.label :sampled %>			    			    
+			</th>
+			<td>
+				<%= f.check_box :sampled %>
+			</td>
+		</tr>
+		<tr>
+			<th>		    			    
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+
+<% end %>

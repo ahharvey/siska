@@ -1,0 +1,32 @@
+<div id="data_panel_container" class="data-panel-container">
+<div id="data_panel" class="data-panel">	
+	<%= form_for(@gear) do |f| %>
+	  	<% if @gear.errors.any? %>
+			<div id="error_explanation">
+		    	<h2><%= pluralize(@gear.errors.count, "error") %> prohibited this log from being saved:</h2>
+
+		      	<ul>
+		      		<% @gear.errors.full_messages.each do |msg| %>
+		        	<li><%= msg %></li>
+		      		<% end %>
+		      	</ul>
+		    </div>
+		<% end %>
+
+		<table class="data-entry">
+			<tr>
+				<th><%= f.label :gear %></th>
+				<td><%= f.text_field :name %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :gear_category, "Category" %></th>
+				<td><%= collection_select (:gear, :gear_category_id, GearCategory.default, :id, :name, :prompt => 'Please select...' ) %></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><%= f.submit %></td>
+			</tr>
+		</table>
+	<% end %>
+</div>
+</div>

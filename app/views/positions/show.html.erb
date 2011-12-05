@@ -1,0 +1,12 @@
+<% title "Position" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @position.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_position_path(@position) %> |
+  <%= link_to delete_ico, @position, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to view_ico, positions_path %>
+</p>

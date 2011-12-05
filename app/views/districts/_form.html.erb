@@ -1,0 +1,30 @@
+<%= form_for @district do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :name, "District" %>
+			</th>
+			<td>
+			    <%= f.text_field :name %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :province %>
+			</th>
+			<td>
+				<%= collection_select (:district, :province_id, Province.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+
+  
+<% end %>

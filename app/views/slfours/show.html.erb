@@ -1,0 +1,40 @@
+<% title "Slfour" %>
+
+<p>
+  <strong>Date:</strong>
+  <%= @slfour.date %>
+</p>
+<p>
+  <strong>Landingcenter:</strong>
+  <%= @slfour.LandingCenter %>
+</p>
+<p>
+  <strong>Gear:</strong>
+  <%= @slfour.Gear %>
+</p>
+<p>
+  <strong>Interval:</strong>
+  <%= @slfour.interval %>
+</p>
+<p>
+  <strong>Serialno:</strong>
+  <%= @slfour.SerialNo %>
+</p>
+<p>
+  <strong>Boatname:</strong>
+  <%= @slfour.BoatName %>
+</p>
+<p>
+  <strong>Boatsize:</strong>
+  <%= @slfour.BoatSize %>
+</p>
+<p>
+  <strong>Sampled:</strong>
+  <%= @slfour.sampled %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_slfour_path(@slfour) %> |
+  <%= link_to delete_ico, @slfour, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to view_ico, slfours_path %>
+</p>

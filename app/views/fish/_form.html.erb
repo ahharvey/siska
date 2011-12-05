@@ -1,0 +1,98 @@
+<%= form_for @fish do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :code %>
+			    
+			</th>
+			<td>
+				<%= f.text_field :code %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :nat_nm, "National Name" %>
+			    
+			</th>
+			<td>
+				<%= f.text_field :nat_nm %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :loc_nm, "Local Name" %>
+			</th>
+			<td>
+				<%= f.text_field :loc_nm %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :family %>
+			</th>
+			<td>
+				<%= f.text_field :family %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :eng_nm, "English Name" %>
+			</th>
+			<td>
+				<%= f.text_field :eng_nm %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :lat_nm, "Latin Name" %>
+			</th>
+			<td>
+				<%= f.text_field :lat_nm %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :sector %>			    
+			</th>
+			<td>
+				<%= collection_select (:fish, :sector_id, Sector.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :water %>			    			    
+			</th>
+			<td>
+				<%= collection_select (:fish, :water_id, Water.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :category %>
+			    			    
+			</th>
+			<td>
+				<%= collection_select (:fish, :category_id, Category.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :status %>			    			    
+			</th>
+			<td>
+				<%= collection_select (:fish, :status_id, Status.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+							    
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+
+  
+<% end %>

@@ -1,0 +1,27 @@
+<% title "User" %>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @user.fname %>
+</p>
+<p>
+  <strong>Lname:</strong>
+  <%= @user.lname %>
+</p>
+<p>
+  <strong>Postion:</strong>
+  <%= @user.position %>
+</p>
+<p>
+  <strong>Office:</strong>
+  <%= @user.office %>
+</p>
+<p>
+  <strong>Role:</strong>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_user_path(@user) %> |
+  <%= link_to delete_ico, @user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to view_ico, users_path %>
+</p>

@@ -1,0 +1,21 @@
+one:
+  landing_center: 
+  date: 2011-11-17
+  gear: 
+  serialno: MyString
+  sampled: false
+  wt_dealer: 1
+  wt_consumed: 1
+  wt_crew: 1
+  wt_others: 1
+
+two:
+  landing_center: 
+  date: 2011-11-17
+  gear: 
+  serialno: MyString
+  sampled: false
+  wt_dealer: 1
+  wt_consumed: 1
+  wt_crew: 1
+  wt_others: 1

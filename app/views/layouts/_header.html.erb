@@ -1,0 +1,27 @@
+<header>
+  	<% if user_signed_in? %>
+		<div class="logo">
+			<% logo = image_tag("logo.png", :alt => "SISKA+", :class => "round") %>
+			<%= link_to logo, root_path %>
+		
+		</div>
+	
+		<%= render 'layouts/mainmenu' %>
+		
+		<% if user_signed_in? %>
+			<nav id="session-menu" class="">
+				<ul class="sf-menu">
+					<li class="">
+						<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+					</li>
+				</ul>
+			</nav>
+		<% end %>
+
+		<div class="clear"></div>
+	<% else %>
+	
+	<% end %>
+	
+</header>
+

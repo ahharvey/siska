@@ -1,0 +1,29 @@
+<%= form_for @landing_center do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :name, "Landing Center" %>
+			</th>
+			<td>
+				<%= f.text_field :name %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :sdistrict, "Sub-district" %>				
+			</th>
+			<td>
+				<%= collection_select (:landing_center, :sdistrict_id, Sdistrict.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+
+<% end %>

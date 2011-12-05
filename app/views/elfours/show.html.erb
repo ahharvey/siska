@@ -1,0 +1,28 @@
+<% title "Elfour" %>
+
+<p>
+  <strong>District:</strong>
+  <%= @elfour.district %>
+</p>
+<p>
+  <strong>Year:</strong>
+  <%= @elfour.year %>
+</p>
+<p>
+  <strong>Quarter:</strong>
+  <%= @elfour.quarter %>
+</p>
+<p>
+  <strong>Fish:</strong>
+  <%= @elfour.fish %>
+</p>
+<p>
+  <strong>Value:</strong>
+  <%= @elfour.value %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_elfour_path(@elfour) %> |
+  <%= link_to delete_ico, @elfour, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, elfours_path %>
+</p>

@@ -1,0 +1,12 @@
+<% title "Province" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @province.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_province_path(@province) %> |
+  <%= link_to delete_ico, @province, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to view_ico, provinces_path %>
+</p>

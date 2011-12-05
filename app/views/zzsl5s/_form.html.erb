@@ -1,0 +1,40 @@
+<%= form_for @sl5 do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :LandingCenter %><br />
+    <%= f.text_field :LandingCenter %>
+  </p>
+  <p>
+    <%= f.label :date %><br />
+    <%= f.date_select :date %>
+  </p>
+  <p>
+    <%= f.label :gear %><br />
+    <%= f.text_field :gear %>
+  </p>
+  <p>
+    <%= f.label :SerialNo %><br />
+    <%= f.text_field :SerialNo %>
+  </p>
+  <p>
+    <%= f.label :observation %><br />
+    <%= f.check_box :observation %>
+  </p>
+  <p>
+    <%= f.label :WtDealer %><br />
+    <%= f.number_field :WtDealer %>
+  </p>
+  <p>
+    <%= f.label :WtConsumed %><br />
+    <%= f.number_field :WtConsumed %>
+  </p>
+  <p>
+    <%= f.label :WtCrew %><br />
+    <%= f.number_field :WtCrew %>
+  </p>
+  <p>
+    <%= f.label :WtOthers %><br />
+    <%= f.number_field :WtOthers %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

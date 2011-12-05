@@ -1,0 +1,12 @@
+<% title "Sector" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sector.name %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_sector_path(@sector) %> |
+  <%= link_to delete_ico, @sector, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, sectors_path %>
+</p>

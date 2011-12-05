@@ -1,0 +1,16 @@
+<% title "Landing Center" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @landing_center.name %>
+</p>
+<p>
+  <strong>Sdistrict:</strong>
+  <%= @landing_center.sdistrict %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_landing_center_path(@landing_center) %> |
+  <%= link_to delete_ico, @landing_center, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, landing_centers_path %>
+</p>

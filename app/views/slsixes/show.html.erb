@@ -1,0 +1,40 @@
+<% title "Slsix" %>
+
+<p>
+  <strong>Village:</strong>
+  <%= @slsix.village %>
+</p>
+<p>
+  <strong>Year:</strong>
+  <%= @slsix.year %>
+</p>
+<p>
+  <strong>Quarter:</strong>
+  <%= @slsix.quarter %>
+</p>
+<p>
+  <strong>Gear:</strong>
+  <%= @slsix.gear %>
+</p>
+<p>
+  <strong>Boat Size:</strong>
+  <%= @slsix.boat_size %>
+</p>
+<p>
+  <strong>Units:</strong>
+  <%= @slsix.units %>
+</p>
+<p>
+  <strong>Month:</strong>
+  <%= @slsix.month %>
+</p>
+<p>
+  <strong>Trips:</strong>
+  <%= @slsix.trips %>
+</p>
+
+<p>
+  <%= link_to edit_ico, edit_slsix_path(@slsix) %> |
+  <%= link_to delete_ico, @slsix, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to back_ico, slsixes_path %>
+</p>

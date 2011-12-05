@@ -1,0 +1,29 @@
+<% title "Villages" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Sdistrict</th>
+	<th></th>
+  </tr>
+  <% for village in @villages %>
+    <tr>
+      <td><%= village.name %></td>
+      <td><%= village.sdistrict %></td>
+      <td><%= link_to "Show", village %></td>
+      <td><%= link_to "Edit", edit_village_path(village) %></td>
+      <td><%= link_to "Destroy", village, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @villages %>
+    </div>
+    <%= will_paginate @villages, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>
+
+<p><%= link_to "New Village", new_village_path %></p>

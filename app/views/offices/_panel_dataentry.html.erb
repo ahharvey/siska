@@ -1,0 +1,42 @@
+<div id="data_panel_container" class="data-panel-container">
+<div id="data_panel" class="data-panel">	
+	<%= form_for(@office) do |f| %>
+	  	<% if @office.errors.any? %>
+			<div id="error_explanation">
+		    	<h2><%= pluralize(@office.errors.count, "error") %> prohibited this log from being saved:</h2>
+
+		      	<ul>
+		      		<% @office.errors.full_messages.each do |msg| %>
+		        	<li><%= msg %></li>
+		      		<% end %>
+		      	</ul>
+		    </div>
+		<% end %>
+
+		<table class="data-entry">
+			<tr>
+				<th><%= f.label :name, "Office Name" %></th>
+				<td><%= f.text_field :name %></td>
+			</tr>
+			<tr>
+				<th><%= f.label :address1, "Address" %></th>
+				<td>
+					<%= f.text_field :address1 %><br />
+					<%= f.text_field :address2 %><br />
+					<%= f.text_field :address3 %>
+				</td>
+			</tr>
+			<tr>
+				<th><%= f.label :sdistrict, "Sub-district" %></th>
+				<td>
+					<%= collection_select (:office, :sdistrict_id, Sdistrict.default, :id, :name, :prompt => 'Please select...' ) %>
+				</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td><%= f.submit %></td>
+			</tr>
+		</table>
+	<% end %>
+</div>
+</div>

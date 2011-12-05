@@ -1,0 +1,86 @@
+<%= form_for @slfive do |f| %>
+	<%= f.error_messages %>
+	<table class="form-table">
+		<tr>
+			<th>
+				<%= f.label :landing_center %>
+			</th>
+			<td>
+				<%= collection_select (:slfive, :landing_center_id, LandingCenter.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :date %>
+			</th>
+			<td>
+				<%= f.date_select :date %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :gear %>
+			    
+			</th>
+			<td>
+				<%= collection_select (:slfive, :gear_id, Gear.default, :id, :name, :prompt => 'Please select...' ) %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :serialno %>
+			</th>
+			<td>
+				<%= f.text_field :serialno %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :sampled %>
+			</th>
+			<td>
+				<%= f.check_box :sampled %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :wt_dealer %>
+			</th>
+			<td>
+				<%= f.number_field :wt_dealer %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :wt_consumed %>			    
+			</th>
+			<td>
+				<%= f.number_field :wt_consumed %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :wt_crew %>			    
+			</th>
+			<td>
+				<%= f.number_field :wt_crew %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<%= f.label :wt_others %>
+			</th>
+			<td>
+				<%= f.number_field :wt_others %>
+			</td>
+		</tr>
+		<tr>
+			<th>
+			</th>
+			<td>
+				<%= f.submit %>
+			</td>
+		</tr>
+	</table>
+
+<% end %>
