@@ -39,9 +39,7 @@
 	<div class="page_info">
     	<%= page_entries_info @fishes %>
     </div>
-    <%= will_paginate @fishes, :container => false %>
+    	<%= will_paginate @fishes, :container => false %>
 </div>
 
 <%= render 'panel_dataentry' %>
-
-<%= link_to new_ico, new_fish_path %>

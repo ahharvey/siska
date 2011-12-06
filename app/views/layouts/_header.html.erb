@@ -1,6 +1,6 @@
 <header>
   	<% if user_signed_in? %>
-		<div class="logo">
+		<div class="logo inline">
 			<% logo = image_tag("logo.png", :alt => "SISKA+", :class => "round") %>
 			<%= link_to logo, root_path %>
 		
@@ -9,7 +9,7 @@
 		<%= render 'layouts/mainmenu' %>
 		
 		<% if user_signed_in? %>
-			<nav id="session-menu" class="">
+			<nav id="session-menu" class="inline">
 				<ul class="sf-menu">
 					<li class="">
 						<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>

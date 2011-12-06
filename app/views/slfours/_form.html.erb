@@ -54,7 +54,7 @@
 	    		<%= f.label :BoatSize, "Boat Size" %>			    
 			</th>
 			<td>
-				<%= collection_select (:slfour, :BoatSize_id, BoatSize.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%= collection_select (:slfour, :BoatSize_id, BoatSize.default, :id, :size, :prompt => 'Please select...' ) %>
 			</td>
 		</tr>
 		<tr>

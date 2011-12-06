@@ -8,15 +8,15 @@
 
 /*LAYOUT*/
 
-html, body {height: 100%;width:1171px;margin:0 auto;}
-header {height:100px;}
+html, body {height: 100%;width:1050px;margin:0 auto;}
+header {height:40px;}
 
 #wrapper {min-height:100%;max-height:100%;height: auto !important;height:100%;margin: 0 auto -4em auto;clear: both;}
 footer, .push {height: 4em;}
 
 /*TYPOGRAPHY*/
 body {font-family: "Helvetica Neue", Helvetica, Verdana, Arial, sans-serif;}
-h1 {background:#D2D9E7;padding:2px;margin:10px 0;text-transform:uppercase;font-size:14px;color:#3B5998;}
+h1 {background:#D2D9E7;padding:2px 5px;margin:5px 0 2px 0;text-transform:uppercase;font-size:14px;color:#3B5998;border: 2px solid #3B5998; }
 
 /*controls*/
 .right{float:right;}
@@ -31,7 +31,8 @@ h1 {background:#D2D9E7;padding:2px;margin:10px 0;text-transform:uppercase;font-s
 #login_header{text-align:center;padding:2px 0;}
 
 /*MENUS*/
-#session-menu{margin-left:20px;}
+#mainmenu{height:40px;margin-left:304px;}
+#session-menu{margin-left:0;height:40px;}
 #session-menu li {background:#D14836;}
 #session-menu a {font-weight:bold;color:#fff;}
 /*
@@ -44,12 +45,12 @@ h1 {background:#D2D9E7;padding:2px;margin:10px 0;text-transform:uppercase;font-s
 
 
 /*PANELS*/
-.data-panel-container {width:90%; margin:0 auto; background:#ccc;border-left:1px solid #ccc;border-right:1px solid #ccc;}
+.data-panel-container {width:1046px; margin:0 auto; background:#efefef;border: 2px solid #3B5998;}
 .data-panel {padding:10px;}
 
 /*TABLES*/
 
-.index-table {border-collapse:collapse;width:90%;margin:0 auto;border:2px solid #3B5998}
+.index-table {border-collapse:collapse;width:100%;margin:0 auto;border:2px solid #3B5998}
 .index-table tr {font-weight:normal;font-size:10px;padding:.1em .2em;vertical-align:top;border-left:2px solid #3B5998;border-right:2px solid #3B5998}
 .index-table tr:nth-child(even) {background-color: #D2D9E7}
 .index-table tr:nth-child(odd) {background-color:}
@@ -59,7 +60,8 @@ h1 {background:#D2D9E7;padding:2px;margin:10px 0;text-transform:uppercase;font-s
 .form-table td {font-weight:normal;font-size:12px;padding:.5em 0;}
 .data-entry {width:100%; margin: 0 auto;}
 .data-entry th {font-weight:bold;font-size:10px;text-transform:uppercase;padding:0 .5em; text-align:right;max-width:80px;width:80px;}
-.data-entry td {padding:.5em 0;max-width:200px;}
+.data-entry td {padding:2px 0;max-width:200px;}
+
 
 /* Forms */
 
@@ -70,6 +72,7 @@ table textarea {width:262px;max-width:262px;}
 table select {max-width:272px;}
 form .button {height:15px;}
 form .round {-moz-border-radius: 15px;-webkit-border-radius: 15px;border-radius: 15px;}
+.data-entry input[type="text"], .data-panel input[type="password"], .data-panel input[type="email"], .data-panel input[type="number"], .data-panel input.text, .data-panel input.title, textarea {font-size:10px;line-height:16px;}
 
 
 /*FLASH NOTICES*/
@@ -87,14 +90,15 @@ form .round {-moz-border-radius: 15px;-webkit-border-radius: 15px;border-radius:
 
 /*PAGINATION*/
 
-.pagination {font-size:10px;background: white;cursor: default;width:100%;text-align:center; /* self-clearing method: */ }
-.pagination a, .pagination span, .pagination em {padding: 0.2em 0.5em;display: block;float: left;margin-right: 1px; }
-.pagination .disabled {color: #ccc;border: 1px solid #ccc; }
-.pagination .current {font-style: normal;font-weight: bold;background: #D14836;color: whiteborder: 1px solid #2e6ab1; }
+.pagination {width:1046px;font-size:10px;background: #D2D9E7;border-left:2px solid #3B5998;border-right:2px solid #3B5998;cursor: default;text-align:center; /* self-clearing method: */ }
+.pagination a, .pagination span, .pagination em {padding: 0.2em 0.5em;margin-right: 1px;margin-bottom:1px;display:inline-block; }
+.pagination .disabled {color: #ececec;border: 1px solid #ececec; }
+.pagination .current {font-style: normal;font-weight: bold;background: #D14836;border: 1px solid #2e6ab1; }
 .pagination a {text-decoration: none;color: #3B5998;border: 1px solid #3B5998; }
 .pagination a:hover, .pagination a:focus {color: #D14836;border-color: #D14836; }
-.pagination .page_info {background: #D2D9E7;color: #3B5998;padding: 0.4em 0.6em;width: 22em;margin:0;text-align: center; }
+.pagination .page_info {background: #D2D9E7;color: #3B5998;padding: 0.4em 0.6em;width: 22em;margin:0 0 2px 0;text-align: center; }
 .pagination .page_info b {color: #000033;background: #6aa6ed;padding: 0.1em 0.25em; }
+.page_info {margin:0 auto !important;}
 .pagination:after {content: ".";display: block;height: 0;clear: both;visibility: hidden; }
 * html .pagination {height: 1%; }
 *:first-child + html .pagination {overflow: hidden; }
