@@ -29,7 +29,7 @@
 			<tr>
 				<th><%= f.label :sdistrict, "Sub-district" %></th>
 				<td>
-					<%= collection_select (:office, :sdistrict_id, Sdistrict.default, :id, :name, :prompt => 'Please select...' ) %>
+					<%= collection_select(:office,:sdistrict_id,Sdistrict.default,:id,:name,:prompt=>'Please select...') %>
 				</td>
 			</tr>
 			<tr>

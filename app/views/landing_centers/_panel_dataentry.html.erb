@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<th><%= f.label :sdistrict, "Sub-district" %></th>
-				<td><%= collection_select (:landing_center, :sdistrict_id, Sdistrict.default, :id, :name, :prompt => 'Please select...' ) %></td>
+				<td><%= collection_select(:landing_center,:sdistrict_id,Sdistrict.default,:id,:name,:prompt=>'Please select...') %></td>
 			</tr>
 			<tr>
 				<th></th>
