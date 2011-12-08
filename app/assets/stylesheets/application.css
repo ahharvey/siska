@@ -50,9 +50,9 @@ h1 {background:#D2D9E7;padding:2px 5px;margin:5px 0 2px 0;text-transform:upperca
 
 /*TABLES*/
 
-.index-table {border-collapse:collapse;width:100%;margin:0 auto;border:2px solid #3B5998}
-.index-table tr {font-weight:normal;font-size:10px;padding:.1em .2em;vertical-align:top;border-left:2px solid #3B5998;border-right:2px solid #3B5998}
-.index-table tr:nth-child(even) {background-color: #D2D9E7}
+.index-table {border-collapse:collapse;width:100%;margin:0 auto;border:2px solid #3B5998;}
+.index-table tr {font-weight:normal;font-size:10px;padding:.1em .2em;vertical-align:top;border-left:2px solid #3B5998;border-right:2px solid #3B5998;}
+.index-table tr:nth-child(even) {background-color: #D2D9E7;}
 .index-table tr:nth-child(odd) {background-color:}
 .index-table th {font-weight:bold;font-size:10px;text-transform:uppercase;padding:0 .5em;border-left:1px solid #ccc;border-right:1px solid #ccc;}
 .index-table td {padding:2px .5em;border-left:1px solid #ccc;border-right:1px solid #ccc;max-width:150px;}
