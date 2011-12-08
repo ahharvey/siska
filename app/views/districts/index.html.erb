@@ -9,7 +9,7 @@
 	<% for district in @districts %>
 	<tr>
 	    <td><%= district.name %></td>
-	    <td><%= district.province %></td>
+	    <td><%= link_to district.province.name, district.province %></td>
 	    <td>
 			<%= link_to view_ico, district %>
 	    	<%= link_to edit_ico, edit_district_path(district) %>

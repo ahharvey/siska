@@ -1,12 +1,12 @@
 <div id="data_panel_container" class="data-panel-container">
 <div id="data_panel" class="data-panel">	
-	<%= form_for(@office) do |f| %>
-	  	<% if @office.errors.any? %>
+	<%= form_for(@position) do |f| %>
+	  	<% if @position.errors.any? %>
 			<div id="error_explanation">
-		    	<h2><%= pluralize(@office.errors.count, "error") %> prohibited this log from being saved:</h2>
+		    	<h2><%= pluralize(@position.errors.count, "error") %> prohibited this log from being saved:</h2>
 
 		      	<ul>
-		      		<% @office.errors.full_messages.each do |msg| %>
+		      		<% @position.errors.full_messages.each do |msg| %>
 		        	<li><%= msg %></li>
 		      		<% end %>
 		      	</ul>

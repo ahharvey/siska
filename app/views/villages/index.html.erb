@@ -10,9 +10,9 @@
     <tr>
       <td><%= village.name %></td>
       <td><%= village.sdistrict %></td>
-      <td><%= link_to "Show", village %></td>
-      <td><%= link_to "Edit", edit_village_path(village) %></td>
-      <td><%= link_to "Destroy", village, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to view_ico, village %></td>
+      <td><%= link_to edit_ico, edit_village_path(village) %></td>
+      <td><%= link_to delete_ico, village, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
@@ -26,4 +26,4 @@
 
 <%= render 'panel_dataentry' %>
 
-<p><%= link_to "New Village", new_village_path %></p>
+<p><%= link_to new_ico, new_village_path %></p>
