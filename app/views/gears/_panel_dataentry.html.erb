@@ -20,7 +20,7 @@
 			</tr>
 			<tr>
 				<th><%= f.label :gear_category, "Category" %></th>
-				<td><%= collection_select (:gear, :gear_category_id, GearCategory.default, :id, :name, :prompt => 'Please select...' ) %></td>
+				<td><%= collection_select(:gear,:gear_category_id,GearCategory.default,:id,:name,:prompt=>'Please select...')%></td>
 			</tr>
 			<tr>
 				<th></th>
