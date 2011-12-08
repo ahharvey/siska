@@ -28,13 +28,13 @@ class Ability
       user ||= User.new # guest user (not logged in)
       if user.has_role? :super-administrator
         superadmin
-      if user.has_role? :administrator
+      elsif user.has_role? :administrator
         admin
-      if user.has_role? :sender
+      elsif user.has_role? :sender
         sender
-      if user.has_role? :writer
+      elsif user.has_role? :writer
         writer
-      if user.has_role? :reader
+      elsif user.has_role? :reader
         reader
       else
         can :read, :all #for guest without roles
