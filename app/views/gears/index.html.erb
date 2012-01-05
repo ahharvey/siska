@@ -1,34 +1,22 @@
 <% title "Gears" %>
 
-<script type="text/x-jquery-tmpl" id="gear_template">  
-  	<tr>
-	    <td>${gear.name}</td>
-		<td>${link_to gear.gear_category.name, gear.gear_category}</td>
-	    <td>
-			${link_to view_ico, gear}
-	    	${link_to edit_ico, edit_gear_path(gear)}
-	    	${link_to delete_ico, gear, :confirm => 'Are you sure?', :method => :delete}
-			<p>test</p>
-		</td>
-	</tr>  
-</script>
-
 <table id="gears_index" class="index-table">
   	<tr>
 	  	<th>Gear</th>
 		<th>Category</th>
 		<th></th>
 	</tr>
-
+	<% for gear in @gears %>
+	<tr>
+		<td><%= gear.name %></td>
+	    <td><%= link_to gear.gear_category.name, gear.gear_category%></td>
+	    <td>
+			<%= link_to view_ico, gear %>
+	    	<%= link_to edit_ico, edit_gear_path(gear) %>
+	    	<%= link_to delete_ico, gear, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
+	</tr>
+	<% end %>
 </table>
-
-<div class="pagination">
-	<div class="page_info">
-    	<%= page_entries_info @gears %>
-    </div>
-    <%= will_paginate @gears, :container => false %>
-</div>
-
-<%= render 'panel_dataentry' %>
 
 <p><%= link_to new_ico, new_gear_path %></p>
