@@ -16,7 +16,7 @@
 			    
 			</th>
 			<td>
-				<%= collection_select (:gear, :gear_category_id, Status.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:gear,:gear_category_id,Status.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
