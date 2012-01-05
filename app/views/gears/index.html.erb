@@ -19,4 +19,11 @@
 	<% end %>
 </table>
 
-<p><%= link_to new_ico, new_gear_path %></p>
+<div class="pagination">
+	<div class="page_info">
+    	<%= page_entries_info @boat_sizes %>
+    </div>
+    <%= will_paginate @boat_sizes, :container => false %>
+</div>
+
+<%= render 'panel_dataentry' %>

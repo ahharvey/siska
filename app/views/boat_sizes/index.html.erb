@@ -11,9 +11,10 @@
 	     <td><%= boat_size.size %></td>
 	     <td><%= boat_size.description %></td>
 	     <td>
-			<%= link_to view_ico, boat_size %></td>
-	     	<%= link_to edit_ico, edit_boat_size_path(boat_size) %></td>
-	     	<%= link_to delete_ico, boat_size, :confirm => 'Are you sure?', :method => :delete %></td>
+			<%= link_to view_ico, boat_size %>
+	     	<%= link_to edit_ico, edit_boat_size_path(boat_size) %>
+	     	<%= link_to delete_ico, boat_size, :confirm => 'Are you sure?', :method => :delete %>
+		</td>
 	</tr>
 	<% end %>
 </table>
