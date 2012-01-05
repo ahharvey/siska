@@ -14,7 +14,7 @@
 				<%= f.label :LandingCenter, "Landing Center" %>
 			</th>
 			<td>
-				<%= collection_select (:slfour, :LandingCenter_id, LandingCenter.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slfour,:LandingCenter_id,LandingCenter.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
@@ -22,7 +22,7 @@
 				<%= f.label :Gear %>
 			</th>
 			<td>
-				<%= collection_select (:slfour, :Gear_id, Gear.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slfour,:Gear_id,Gear.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
@@ -54,7 +54,7 @@
 	    		<%= f.label :BoatSize, "Boat Size" %>			    
 			</th>
 			<td>
-				<%= collection_select (:slfour, :BoatSize_id, BoatSize.default, :id, :size, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slfour,:BoatSize_id,BoatSize.default,:id,:size,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>

@@ -6,7 +6,7 @@
 				<%= f.label :district %>
 			</th>
 			<td>
-				<%= collection_select (:elfour, :district_id, District.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:elfour,:district_id,District.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
@@ -31,7 +31,7 @@
 				<%= f.label :fish %>			    
 			</th>
 			<td>
-				<%= collection_select (:elfour, :fish_id, Fish.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:elfour,:fish_id,Fish.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>

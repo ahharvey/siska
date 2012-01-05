@@ -6,7 +6,7 @@
 				<%= f.label :landing_center %>
 			</th>
 			<td>
-				<%= collection_select (:slfive, :landing_center_id, LandingCenter.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slfive,:landing_center_id,LandingCenter.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
@@ -23,7 +23,7 @@
 			    
 			</th>
 			<td>
-				<%= collection_select (:slfive, :gear_id, Gear.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slfive,:gear_id,Gear.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>

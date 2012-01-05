@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'pg', :require => 'pg'
-gem 'thin'
 gem 'devise', :require => 'devise'
 gem 'cancan'
 gem 'json'
@@ -15,6 +14,10 @@ gem 'will_paginate'
 group :development do
 	gem 'annotate','2.4.0'
 	gem 'nifty-generators'
+end
+
+group :deployment do
+	gem 'thin'
 end
 
 # Bundle edge Rails instead:

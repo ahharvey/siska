@@ -6,7 +6,7 @@
 				<%= f.label :village %>			    
 			</th>
 			<td>
-				<%= collection_select (:slsix, :village_id, Village.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slsix,:village_id,Village.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
@@ -30,7 +30,7 @@
 		        <%= f.label :gear %>			    
 			</th>
 			<td>
-				<%= collection_select (:slsix, :gear_id, Gear.default, :id, :name, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slsix,:gear_id,Gear.default,:id,:name,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
@@ -38,7 +38,7 @@
 		    	<%= f.label :boat_size %>			    
 			</th>
 			<td>
-				<%= collection_select (:slsix, :boat_size_id, BoatSize.default, :id, :size, :prompt => 'Please select...' ) %>
+				<%=collection_select(:slsix,:boat_size_id,BoatSize.default,:id,:size,:prompt=>'Please select...')%>
 			</td>
 		</tr>
 		<tr>
